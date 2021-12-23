@@ -1,3 +1,4 @@
+<<<<<< < HEAD
 #include <iostream>
 #include <stack>
 
@@ -25,3 +26,14 @@ int main() {
 
 	return 0;
 }
+=======
+
+int fibo(int ans, int n){
+    
+    if(n < 2) {return n;}
+    else {
+        ans += fibo(ans, n - 1) + fibo(ans, n - 2);
+    }
+    return ans;
+}
+>>>>>>> 4c7d7d1a9bd2abf7c4b40df35086f3db93b8da4e
