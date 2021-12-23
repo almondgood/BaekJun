@@ -1,9 +1,7 @@
 #include <iostream>
-#include <cmath>
+#include <stack>
 
 using namespace std;
-
-int pibonaci(int cnt, int n);
 
 int main() {
 	
@@ -11,23 +9,19 @@ int main() {
 	cin.tie(nullptr);
 	
 	int n = 0;
+	stack<int> s;
 
 	cin >> n;
 
-	cout << pibonaci(0, n);
+	for (int i = n; i > 0; i++) {
+		s.push(i);
+	}
+
+	for (int i = 0; i < n; i++) {
+		cout << s[i];
+	}
+
+
 
 	return 0;
-}
-
-int pibonaci(int cnt, int n)
-{
-	int pb = 0;
-	if (n == 0) { return 0; }
-	else if (n == 1) { return 1; }
-	else if (cnt == n) {
-		return pb;
-	}
-	else { pb += pibonaci(cnt, n) + pibonaci(cnt + 1, n); }
-
-	return pb;
 }
